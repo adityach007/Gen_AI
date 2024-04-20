@@ -63,3 +63,11 @@ streamlit run app.py
 - Enter the English text you want to translate in the large text area box.
 - Click the "Translate" button.
 - The translated Hindi text will be displayed in a success message below the input box.
+
+# Demo Video
+
+
+
+https://github.com/adityach007/Gen_AI/assets/108794914/a8e32477-fdc3-4abc-ba3b-a83ffe97d7f8
+
+
