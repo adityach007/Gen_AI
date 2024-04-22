@@ -25,7 +25,11 @@ def load_model(target_lang):
 
     def preprocess_function(examples):
         inputs = [ex[source_lang] for ex in examples["translation"]]
-        targets = [ex[target_lang] for ex in examples["translation"]]
+        try:
+            targets = [ex[target_lang] for ex in examples["translation"]]
+        except KeyError:
+            # Handle the case where the target language is not present in the dataset
+            targets = [""]*len(inputs)  # or some other default value
         model_inputs = tokenizer(inputs, max_length=max_input_length, truncation=True)
         # Setup the tokenizer for targets with tokenizer.as_target_tokenizer():
         labels = tokenizer(targets, max_length=max_target_length, truncation=True)
