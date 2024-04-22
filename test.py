@@ -8,7 +8,7 @@ from gtts import gTTS
 import time
 from io import BytesIO
 
-@st.cache_resource
+@st.cache
 def load_model(target_lang):
     if target_lang == "hi":
         model_checkpoint = "Helsinki-NLP/opus-mt-en-hi"
