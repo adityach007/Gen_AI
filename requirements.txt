@@ -3,3 +3,6 @@ transformers==4.11.3
 tensorflow==2.7.0
 datasets==1.12.1
 sentencepiece==0.1.96
+gTTs
+time
+BytesIO
